@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- New game menu start -->
+  <section id="newgame">
+    <img class="logo"src="/assets/logo.svg" alt="XO Logo">
+    <div id="selection">
+      <h4>Pick your mark</h4>
+      <div id="player-selection">
+        <button class="icon-x" id="player-x" aria-label="Play as X"></button>
+        <button class="icon-o active" id="player-o" aria-label="Play as O" disabled></button>
+      </div>
+      <small>Remember: X goes first</small>
+    </div>
+    <button class="btn btn-orange" id="single">New Game (vs CPU)</button>
+    <button class="btn btn-cyan" id="multi">New Game (vs player)</button>
+  </section>
+  <!-- New game menu end -->
+  
+  <!-- Game board start -->
+  <section id="gameboard" data-turn="player-x">
+    <img class="logo" src="/assets/logo.svg" alt="XO Logo">
+    <div id="turn">TURN</div>
+    <div class="restart-wrapper">
+      <button class="icon-restart" id="reset" data-action="reset" aria-label="Restart"></button>
+    </div>
+
+
+    <button data-field="0"></button>
+    <button data-field="1"></button>
+    <button data-field="2"></button>
+    <button data-field="3"></button>
+    <button data-field="4"></button>
+    <button data-field="5"></button>
+    <button data-field="6"></button>
+    <button data-field="7"></button>
+    <button data-field="8"></button>
+
+
+    <div id="score-x">
+      <h4 class="title"></h4>
+      <span class="score">0</span>
+    </div>
+    <div class="wrapper">
+      <div id="score-ties">
+        <h4 class="title">TIES</h4>
+        <span class="score">0</span>
+      </div>
+    </div>
+    <div id="score-o">
+      <h4 class="title"></h4>
+      <span class="score">0</span>
+    </div>
+  </section>
+  <!-- Game board end -->
+
+  <dialog id="gameover">
+    <h4 id="result-small"></h4>
+    <h3 id="result"></h3>
+    <div class="actions">
+      <button class="btn-silver small" data-action="confirm-restart">Quit</button>
+      <button class="btn-orange small" data-action="next-round">Next round</button>
+    </div>
+  </dialog>
+  <dialog id="confirm-restart">
+    <h3>Restart game?</h3>
+    <div class="actions">
+      <button class="btn-silver small" data-action="next-round">No, cancel</button>
+      <button class="btn-orange small" data-action="confirm-restart">Yes, restart</button>
+    </div>
+  </dialog>
+  
+  <pre id="debug"></pre>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
