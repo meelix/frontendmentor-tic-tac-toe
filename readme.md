@@ -20,8 +20,8 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/basic-tic-tac-toe-with-css-grid-yk-gX5fC2B)
+- Live Site URL: [Add live site URL here](https://meelix.github.io/frontendmentor-tic-tac-toe/)
 
 ## My process
 
